@@ -18,3 +18,8 @@ The output is a tab separated csv with key, value encoded in base 64 and ttl.
 * Do it all in one step:
 
     ./tap_dump.py localhost:11210 | sort | uniq | ./load_tap_dump.rb localhost:11234
+
+# TODO:
+
+* Rewrite the python code in ruby
+* Make a gem out of it
