@@ -1,0 +1,8 @@
+*.pyc
+.DS_Store
+
+#Editors
+*.swp
+*.tmproj
+*.sublime-project
+.idea/
