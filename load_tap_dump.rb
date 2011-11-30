@@ -21,5 +21,5 @@ while line = STDIN.gets
             raw_value
           end
   puts "Set #{key} to #{value.inspect} with #{ttl} ttl #{raw ? '(raw)' : ''}"
-  client.set(key, value, ttl.to_i, raw: raw)
+  client.set(key, value, ttl.to_i, :raw => raw)
 end
