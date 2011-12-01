@@ -6,3 +6,7 @@
 *.tmproj
 *.sublime-project
 .idea/
+*.gem
+.bundle
+Gemfile.lock
+pkg/*

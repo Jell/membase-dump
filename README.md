@@ -1,25 +1,25 @@
 # Install:
 
-    gem install bundler -v=1.0.11
-    bundle install
+    gem install membase-dump
 
 # How to:
 
 * Dump data:
 
-    ./tap_dump.py localhost:11210 | sort | uniq > dump.csv
+    tap_dump localhost:11210 > dump.csv
 
 The output is a tab separated csv with key, value encoded in base 64 and ttl.
 
 * Load data:
 
-    ./load_tap_dump.rb localhost:11234 < dump.csv
+    tap_load localhost:11234 < dump.csv
 
 * Do it all in one step:
 
-    ./tap_dump.py localhost:11210 | sort | uniq | ./load_tap_dump.rb localhost:11234
+    tap_dump localhost:11210 | tap_load localhost:11234
 
 # TODO:
 
+* Make something less ugly
+* Write some tests
 * Rewrite the python code in ruby
-* Make a gem out of it

@@ -1,0 +1,13 @@
+#! /usr/bin/env ruby
+
+require 'membase-dump'
+
+include Membase::Dump
+
+client = Dalli::Client.new(ARGV.first)
+
+while line = STDIN.gets
+  key, value, ttl, raw = parse_mutation(line)
+  puts "Set #{key} to #{value.inspect} with #{ttl} ttl #{raw ? '(raw)' : ''}"
+  client.set(key, value, ttl.to_i, :raw => raw)
+end

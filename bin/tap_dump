@@ -1,0 +1,3 @@
+#! /usr/bin/env ruby
+
+system "/usr/bin/env python #{File.dirname(__FILE__)}/../lib/tap_dump.py #{ARGV.first}"

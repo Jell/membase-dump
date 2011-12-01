@@ -1,4 +1,4 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'dalli'
-gem 'active_support'
+# Specify your gem's dependencies in membase-dump.gemspec
+gemspec
